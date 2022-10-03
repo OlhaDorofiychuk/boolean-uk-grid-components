@@ -35,11 +35,11 @@
   grid-area: container_two-column-grid__expand-two;
   display: grid;
   grid-template-columns: 1fr 6fr;
-  margin-top: 3px;
-  padding: 2px;
+  gap: 7px;
   border: dotted blue
-
+  
  }
+
  .logo { 
   border: 1px dotted red;
   padding: 20px;
@@ -52,11 +52,26 @@
   padding: 20px;
   margin: 5px ;
  }
-      .three-column-grid {
+      .container-three-column-grid {
+        grid-area: container-three-column-gird;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 7px;
+        border: dotted blue;
+        padding: 5px;
+
       }
 
-      .three-column-grid__expand-two {
+      .container_three_column_grid__expand_two {
+        grid-area: three_column_grid__expand_two;
+        display: grid;
+        grid-template-columns: 1fr 15fr 1fr;
+        gap: 7px;
+        border: dotted blue;
+        padding: 5px;
       }
+
+
 
       .five-column-grid {
       }
@@ -85,7 +100,7 @@
     </div>
     <div>
       <h2>Three Column Grid</h2>
-      <div class="container three-column-grid">
+      <div class="container-three-column-grid">
         <div class="box"></div>
         <div class="box"></div>
         <div class="box"></div>
@@ -93,7 +108,7 @@
     </div>
     <div>
       <h2>Three Column Grid with Expansion</h2>
-      <div class="container three-column-grid__expand-two">
+      <div class="container_three_column_grid__expand_two">
         <div class="box"></div>
         <div class="box expand"></div>
         <div class="box"></div>
