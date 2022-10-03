@@ -39,36 +39,91 @@
   padding: 5px;
   border: dotted blue;
   gap: 3px
+  
  }
+
  .logo { 
   border: 1px dotted red;
   padding: 5px;
+  width: 50px;
  }
  .box_expand {
   border: dotted black 1px; 
   padding: 20px;
  }
-      .three-column-grid {
+      .container-three-column-grid {
+        grid-area: container-three-column-gird;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 7px;
+        border: dotted blue;
+        padding: 5px;
+
       }
 
-      .three-column-grid__expand-two {
+      .container_three_column_grid__expand_two {
+        grid-area: three_column_grid__expand_two;
+        display: grid;
+        grid-template-columns: 1fr 15fr 1fr;
+        gap: 7px;
+        border: dotted blue;
+        padding: 5px;
       }
 
       .five-column-grid {
+        grid-area:container five-column-grid;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap:7px
       }
 
       .center-grid {
+        grid-area: container center-grid ;
+        display: grid;
+        height: 50px;
+        grid-template-columns: 100px;
       }
 
+      /* .box_centered {
+        grid-area: box_centered;
+        display: grid;
+        border: dotted plum 2px; */
+  
+      /* } */
       .centered {
+        grid-area: centered;
+        display: grid;
+        border:dotted rgb(120, 120, 228);
+        place-items: center;
+        height: 35px;
       }
 
       /* Grid within Grid Section */
       /* Practice re-using classes */
 
       .two-column-grid {
-        
+        grid-area: two-column-grid;
+        display: grid;
+        background-color: aquamarine;
       }
+      .container_two-column-grid {
+        grid-area: container_two-column-grid ;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 7px;
+        border: 2px dotted lightcoral;
+      }
+      .box1 {
+        grid-area: box1;
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+        .box2 {
+          grid-area: box2;
+          display: grid;
+          grid-template-columns: repeat(5, 1fr)
+        }
+
     </style>
   </head>
   <body>
@@ -81,7 +136,7 @@
     </div>
     <div>
       <h2>Three Column Grid</h2>
-      <div class="container three-column-grid">
+      <div class="container-three-column-grid">
         <div class="box"></div>
         <div class="box"></div>
         <div class="box"></div>
@@ -89,7 +144,7 @@
     </div>
     <div>
       <h2>Three Column Grid with Expansion</h2>
-      <div class="container three-column-grid__expand-two">
+      <div class="container_three_column_grid__expand_two">
         <div class="box"></div>
         <div class="box expand"></div>
         <div class="box"></div>
@@ -108,18 +163,19 @@
     <div>
       <h2>Center Grid</h2>
       <div class="container center-grid">
-        <div class="box centered"></div>
+        <div class="box_centered"></div>
+        <div class="centered"></div>
       </div>
     </div>
     <div>
       <h2>Grid within Grid #1</h2>
-      <div class="container two-column-grid">
-        <div class="box">
+      <div class="container_two-column-grid">
+        <div class="box1">
           <div class="inner-box"></div>
           <div class="inner-box"></div>
           <div class="inner-box"></div>
         </div>
-        <div class="box">
+        <div class="box2">
           <div class="inner-box"></div>
           <div class="inner-box"></div>
           <div class="inner-box"></div>
