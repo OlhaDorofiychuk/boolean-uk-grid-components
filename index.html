@@ -30,27 +30,24 @@
       /* Don't touch this END */
 
       /* Write CSS Here */
-      .container_two-column-grid__expand-two
- {
-  grid-area: container_two-column-grid__expand-two;
-  display: grid;
-  grid-template-columns: 1fr 7fr;
-  margin: 5px;
-  padding: 5px;
-  border: dotted blue;
-  gap: 3px
-  
- }
+      .container_two-column-grid__expand-two {
+        grid-area: container_two-column-grid__expand-two;
+        display: grid;
+        grid-template-columns: 1fr 7fr;
+        margin: 5px;
+        padding: 5px;
+        border: dotted blue;
+        gap: 7px;
+      }
 
- .logo { 
-  border: 1px dotted red;
-  padding: 5px;
-  width: 50px;
- }
- .box_expand {
-  border: dotted black 1px; 
-  padding: 20px;
- }
+      .logo {
+        border: 1px dotted blue;
+      }
+
+      .box_expand {
+        border: dotted red 1px;
+        padding: 20px;
+      }
       .container-three-column-grid {
         grid-area: container-three-column-gird;
         display: grid;
@@ -58,7 +55,6 @@
         gap: 7px;
         border: dotted blue;
         padding: 5px;
-
       }
 
       .container_three_column_grid__expand_two {
@@ -71,58 +67,93 @@
       }
 
       .five-column-grid {
-        grid-area:container five-column-grid;
+        grid-area: container five-column-grid;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        gap:7px
+        gap: 7px;
       }
 
       .center-grid {
-        grid-area: container center-grid ;
+        grid-area: container center-grid;
         display: grid;
-        height: 50px;
-        grid-template-columns: 100px;
+        grid-template-rows: 1fr;
+        place-items: center start;
       }
 
-      /* .box_centered {
+      .box_centered {
         grid-area: box_centered;
         display: grid;
-        border: dotted plum 2px; */
-  
-      /* } */
-      .centered {
-        grid-area: centered;
-        display: grid;
-        border:dotted rgb(120, 120, 228);
-        place-items: center;
-        height: 35px;
+        border: dotted plum 2px;
+        height: 40px;
+        width: 200px;
       }
 
+    
       /* Grid within Grid Section */
       /* Practice re-using classes */
 
       .two-column-grid {
-        grid-area: two-column-grid;
-        display: grid;
-        background-color: aquamarine;
       }
       .container_two-column-grid {
-        grid-area: container_two-column-grid ;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 7px;
-        border: 2px dotted lightcoral;
+        grid-template-columns: 1fr 1fr;
+        border: 2px dotted cyan;
+    
       }
       .box1 {
-        grid-area: box1;
-        display:grid;
+        border: 2px dotted pink;
+        padding: 4px;
+        margin: 5px;
+
+        display: grid;
+        gap: 8px;
+        grid-template-columns: repeat(3, 1fr);
+       
+      }
+      .box2 {
+        border: 2px dotted pink;
+        padding: 4px;
+        margin: 5px;
+
+        display: grid;
+        gap: 8px;
+        grid-template-columns: repeat(5, 1fr);
+               
+      }
+      
+      .container_three_column_grid {
+        display: grid;
+        grid-template-columns: 1fr 15fr 1fr;
+        border: 2px dotted cyan;
+      }
+
+      .boxOne {
+        border: 2px dotted pink;
+        padding: 4px;
+        margin: 5px;
+
+        display: grid;
+        gap: 8px;
+      }
+
+      .box2expand {
+        border: 2px dotted pink;
+        padding: 4px;
+        margin: 5px;
+
+        display: grid;
+        gap: 8px;
+      }
+
+      .boxThree {
+        border: 2px dotted pink;
+        padding: 4px;
+        margin: 5px;
+
+        display: grid;
+        gap: 8px;
         grid-template-columns: repeat(3, 1fr);
       }
-        .box2 {
-          grid-area: box2;
-          display: grid;
-          grid-template-columns: repeat(5, 1fr)
-        }
 
     </style>
   </head>
@@ -186,14 +217,14 @@
     </div>
     <div>
       <h2>Grid within Grid #2 (Expansion)</h2>
-      <div class="container">
-        <div class="box">
+      <div class="container_three_column_grid">
+        <div class="boxOne">
           <div class="inner-box"></div>
         </div>
-        <div class="box expand">
+        <div class="box2expand">
           <div class="inner-box width-sm"></div>
         </div>
-        <div class="box">
+        <div class="boxThree">
           <div class="inner-box"></div>
           <div class="inner-box"></div>
           <div class="inner-box"></div>
